@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const passport = require('passport')
 const cors = require('cors')
 const morgan = require('morgan')
+const path = require('path')
 const dotenv = require('dotenv');
 dotenv.config()
 
