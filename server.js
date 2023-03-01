@@ -9,7 +9,6 @@ const dotenv = require('dotenv');
 dotenv.config()
 
 
-app.use(express.static(path.resolve(__dirname, 'build')));
 //Bootstrap
 const { addRootAdmin } = require('./controller/bootsrap')
 
@@ -25,7 +24,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 app.use(cors())
 
-
+app.use(express.static(path.resolve(__dirname, 'build')));
 
 const adminRoutes = require('./routes/adminRoutes')
 const facultyRoutes = require('./routes/facultyRoutes')
