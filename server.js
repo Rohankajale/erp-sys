@@ -87,17 +87,33 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
-mongoose.set('strictQuery', false);
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true }, { useUnifiedTopology: true })
-.then(() => {
-    app.listen(3000, () => {
-        console.log('Server Started')
-    })
-}).catch((err) => {
-    console.log(err)
+server.listen(PORT, async () => {
+    try {
+        await connectDb()
+        const res = await addRootAdmin()
+        if (res.success) {
+            console.log({
+                "instance": true,
+                "database": true,
+                "port": 5000
+            })
+        }
+        else {
+            console.log("====ERROR====")
+            console.log(res.message)
+        }
+    }
+    catch (error) {
+        console.log("SERVER IS NOT UP")
+        console.log({
+            "error": error.message
+        })
+    }
+
 })
 
-
+// process.env.MONGO_URL.replace("<password>", process.env.MONGO_PASSWORD
+// "mongodb://127.0.0.1:27017/frontEndProject"
 
 
 
