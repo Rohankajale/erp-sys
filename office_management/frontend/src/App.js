@@ -14,8 +14,8 @@ import { setStudentUser, studentLogout } from './redux/action/studentAction'
 
 import LoginPage from './Pages/LoginPage'
 import Home from './Pages/StudentHome'
-
-
+import StudentFeedbackLink from './Pages/Student/StudentFeedbackLink';
+import FacultyFeedbackLink from './Pages/Faculty/FacultyFeedbackLink';
 import StudentDetails from './Pages/StudentDetails'
 import facultyInterface from './Pages/FacultyInterface'
 import AttendenceFaculty from './Pages/AttendenceFaculty'
@@ -50,7 +50,6 @@ import AdminGetAllSubject from './Pages/Admin/AdminGetAllSubjects'
 
 import AdminHome from './Pages/Admin/AdminHome'
  
-import FeedbackLink from './Pages/Feedback/Feedback'
 
 
 if (window.localStorage.facultyJwtToken) {
@@ -102,7 +101,8 @@ function App() {
           <Route exact path='/' component={FacultyStudentLoginPags} />
           <Route exact path='/adminLogin' component={LoginPage} />
           <Route exact path='/home' component={Home} />
-          <Route exact path='/feedback' component={FeedbackLink} />
+          <Route exact path='/faculty/facultyFeedbackLink' component={FacultyFeedbackLink} />
+          <Route exact path='/student/studentFeedbackLink' component={StudentFeedbackLink} />
           <Route exact path='/student/updateProfile' component={StudentUpdateProfile} />
           <Route exact path="/studentDetails" component={StudentDetails} />
           <Route exact path='/faculty' component={facultyInterface} />

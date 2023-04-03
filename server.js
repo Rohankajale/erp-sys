@@ -63,11 +63,11 @@ app.use('/api/student', studentRoutes)
 
 
 //Catching 404 Error
-app.use((req, res, next) => {
-    const error = new Error('INVALID ROUTE')
-    error.status = 404
-    next(error);
-})
+// app.use((req, res, next) => {
+//     const error = new Error('INVALID ROUTE')
+//     error.status = 404
+//     next(error);
+// })
 
 //Error handler function
 app.use((error, req, res, next) => {

@@ -57,7 +57,9 @@ const Home = () => {
                                 <li className="nav-item">
                                     <button type="button" className="btn"><Link to="/student/updatePassword"><li>UPDATE PASSWORD</li></Link></button>
                                 </li>
-                               
+                                <li className="nav-item">
+                                    <button type="button" className="btn"><Link to="/student/studentFeedbackLink"><li>FEEDBACK</li></Link></button>
+                                </li>
                             </ul>
                            
                         </div>
