@@ -16,6 +16,7 @@ import LoginPage from './Pages/LoginPage'
 import Home from './Pages/StudentHome'
 import StudentFeedbackLink from './Pages/Student/StudentFeedbackLink';
 import FacultyFeedbackLink from './Pages/Faculty/FacultyFeedbackLink';
+import AdminFeedbackLink from './Pages/Admin/AdminFeedbackLink';
 import StudentDetails from './Pages/StudentDetails'
 import facultyInterface from './Pages/FacultyInterface'
 import AttendenceFaculty from './Pages/AttendenceFaculty'
@@ -103,6 +104,7 @@ function App() {
           <Route exact path='/home' component={Home} />
           <Route exact path='/faculty/facultyFeedbackLink' component={FacultyFeedbackLink} />
           <Route exact path='/student/studentFeedbackLink' component={StudentFeedbackLink} />
+          <Route exact path='admin/adminFeedbackLink' component={AdminFeedbackLink} />
           <Route exact path='/student/updateProfile' component={StudentUpdateProfile} />
           <Route exact path="/studentDetails" component={StudentDetails} />
           <Route exact path='/faculty' component={facultyInterface} />
