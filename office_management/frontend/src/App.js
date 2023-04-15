@@ -104,7 +104,7 @@ function App() {
           <Route exact path='/home' component={Home} />
           <Route exact path='/faculty/facultyFeedbackLink' component={FacultyFeedbackLink} />
           <Route exact path='/student/studentFeedbackLink' component={StudentFeedbackLink} />
-          <Route exact path='admin/adminFeedbackLink' component={AdminFeedbackLink} />
+          <Route exact path='/admin/adminFeedbackLink' component={AdminFeedbackLink} />
           <Route exact path='/student/updateProfile' component={StudentUpdateProfile} />
           <Route exact path="/studentDetails" component={StudentDetails} />
           <Route exact path='/faculty' component={facultyInterface} />
